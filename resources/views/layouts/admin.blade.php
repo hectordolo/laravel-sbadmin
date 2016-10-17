@@ -58,60 +58,51 @@
         </a>
     </div>
 
-    @if(Auth::guest())
-        <ul class="nav navbar-top-links navbar-right">
-            <li><a href="{{ url('/login') }}">Login</a></li>
-            <li><a href="{{ url('/register') }}">Register</a></li>
-        </ul>
-    </nav>
-    @else
-        <ul class="nav navbar-top-links navbar-right">
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-user">
-                    <li>
-                        <a href="{{ url('/logout') }}"
-                           onclick="event.preventDefault();
+    <ul class="nav navbar-top-links navbar-right">
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="{{ url('/logout') }}"
+                       onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                            <i class="fa fa-sign-out fa-fw"></i> Logout
-                        </a>
+                        <i class="fa fa-sign-out fa-fw"></i> Logout
+                    </a>
 
-                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                            {{ csrf_field() }}
-                        </form>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </li>
+            </ul>
+        </li>
+    </ul>
 
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="side-menu">
-                    <li class="sidebar-search">
-                        <div class="input-group custom-search-form">
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="sidebar-search">
+                    <div class="input-group custom-search-form">
 
-                            <div class="input-group">
-                                {!! Form::text('search', null, ['class' => 'form-control', 'placeholder' => 'Search...']) !!}
-                                <span class="input-group-btn">
-                                            <button class="btn btn-default" type="submit">
-                                                <i class="fa fa-search"></i>
-                                            </button>
-                                        </span>
-                            </div>
-
+                        <div class="input-group">
+                            {!! Form::text('search', null, ['class' => 'form-control', 'placeholder' => 'Search...']) !!}
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
                         </div>
-                    </li>
-                    <li>
-                        <a href="{{url('/')}}"><i class="fa fa-dashboard fa-fw"></i> Home</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    @endif
 
+                    </div>
+                </li>
+                <li>
+                    <a href="{{url('/')}}"><i class="fa fa-dashboard fa-fw"></i> Home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 <div id="page-wrapper">
 
