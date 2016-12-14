@@ -23,7 +23,7 @@ Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT license]
 
 ## Installation
 
-* `git clone origin https://github.com/hectordolo/laravel-sbadmin.git 'PROJECT_DIRECTORY'`
+* `git clone https://github.com/hectordolo/laravel-sbadmin.git 'PROJECT_DIRECTORY'`
 * `cd 'PROJECT_DIRECTORY'`
 * `composer install`
 * `php artisan key:generate`
