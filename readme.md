@@ -33,5 +33,7 @@ Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT license]
     * set `DB_USERNAME="YOUR DATABASE USERNAME"`
     * set `DB_PASSWORD="YOUR DATABASE PASSWORD"`
 * `php artisan migrate`
+* `php artisan key:generate`
+* `php artisan config:clear`
 * `php artisan serve`
 * You can now register a new user to use the application.
